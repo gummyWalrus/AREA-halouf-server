@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="token" content="eyJhbGciOiJIUzI1NiJ9.NjM0ZGU5NmY3NTlhNTg4N2Y0ODU3NmMx.ZAwKh7Q953VmqYezdHqN8IVoduj50SjvWctell8GUHc">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+        <script>
+            function login() {
+                axios.post('http://localhost:8080/auth/login', {
+                    email: 'loys.caucheteux@gmail.com',
+                    password: 'passwd'
+                }).then(function (response) {
+                    console.log('token ', response.data.token);
+                    Cookies.set('email', 'ciro.autiero@epitech.eu', { sameSite: 'none' });
+                    Cookies.set('token', response.data.token, { sameSite: 'none' });
+                    document.getElementById('twitterLink').href = `http://localhost:8080/auth/twitter?token=${response.data.token}`;
+                    document.getElementById('redditLink').href = `http://localhost:8080/auth/reddit?token=${response.data.token}`;
+                    document.getElementById('googleLink').href = `http://localhost:8080/auth/google?token=${response.data.token}`;
+                    document.getElementById('githubLink').href = `http://localhost:8080/auth/github?token=${response.data.token}`;
+                    document.getElementById('discordLink').href = `http://localhost:8080/auth/discord?token=${response.data.token}`;
+            });
+        }
+        </script>
+        <a id="twitterLink" href="http://localhost:8080/auth/twitter">Sign in to Twitter</a>
+        <a id="githubLink" href="http://localhost:8080/auth/github">Sign in to GitHub</a>
+        <a id="redditLink" href="http://localhost:8080/auth/reddit">Sign in to Reddit</a>
+        <a id="googleLink" href="http://localhost:8080/auth/google">Sign in to Google</a>
+        <a id="discordLink" href="http://localhost:8080/auth/discord">Sign in to Discord</a>
+        <button onclick="login()">Login</button>
+    </body>
+</html>
