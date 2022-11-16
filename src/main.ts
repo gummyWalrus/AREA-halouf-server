@@ -26,7 +26,7 @@ async function bootstrap() {
     saveUninitialized: false,
   }))
   app.use(cookieParser());
-  await app.listen(8080);
+  await app.listen(process.env.PORT || 8080);
   console.log("app listening on port 8080");
 }
 bootstrap();
