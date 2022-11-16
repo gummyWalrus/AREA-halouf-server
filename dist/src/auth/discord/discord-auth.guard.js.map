@@ -1,1 +1,0 @@
-{"version":3,"file":"discord-auth.guard.js","sourceRoot":"","sources":["../../../../src/auth/discord/discord-auth.guard.ts"],"names":[],"mappings":";;;;;;;;AAAA,2CAA4C;AAC5C,+CAA6C;AAG9B,IAAM,iBAAiB,GAAvB,MAAM,iBAAkB,SAAQ,IAAA,oBAAS,EAAC,SAAS,CAAC;CAAG,CAAA;AAAjD,iBAAiB;IADrC,IAAA,mBAAU,GAAE;GACQ,iBAAiB,CAAgC;kBAAjD,iBAAiB"}
