@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from '../../src/app.module';
-import { User } from '../../src/user/interfaces/user.interface';
+import { AppModule } from 'src/app.module';
+import { User } from 'src/user/interfaces/user.interface';
 import { generateUserInput } from '../user/create.user.helper';
 
 const bcrypt = require('bcryptjs');

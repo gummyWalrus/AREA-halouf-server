@@ -61,7 +61,7 @@ export class YoutubeService {
                 description: area.reaction.data.description,
             },
             status: {
-                privacyStatus: area.reaction.data.privacyStatus ? 'private' : 'public'
+                privacyStatus: area.reaction.data.privacyStatus
             }
         }
     }

@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards } from 
 import { AreaService } from './area.service';
 import { CreateAreaDto } from './dto/create-area.dto';
 import { UpdateAreaDto } from './dto/update-area.dto';
-import { JwtAuthGuard } from '../../src/auth/jwt/jwt-auth.guard';
+import { JwtAuthGuard } from 'src/auth/jwt/jwt-auth.guard';
 
 @UseGuards(JwtAuthGuard)
 @Controller('area')

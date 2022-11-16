@@ -1,5 +1,5 @@
 import * as Chance from 'chance';
-import { User } from '../../src/user/interfaces/user.interface';
+import { User } from 'src/user/interfaces/user.interface';
 const chance = new Chance();
 
 export const generateUserInput = function() {

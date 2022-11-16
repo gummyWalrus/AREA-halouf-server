@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer');
 const MailComposer = require('nodemailer/lib/mail-composer');
 import {google} from 'googleapis';
 import {GetAccessTokenResponse} from "google-auth-library/build/src/auth/oauth2client";
-import { Area } from '../../src/area/schemas/area.schema';
-import { UserService } from '../../src/user/user.service';
+import { Area } from 'src/area/schemas/area.schema';
+import { UserService } from 'src/user/user.service';
 
 /**
  * Service for mail

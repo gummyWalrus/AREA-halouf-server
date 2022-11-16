@@ -4,11 +4,11 @@ import { Model } from 'mongoose';
 import { Area, AreaDocument } from './schemas/area.schema';
 import { CreateAreaDto } from './dto/create-area.dto';
 import { UpdateAreaDto } from './dto/update-area.dto';
-import { UserService } from '../../src/user/user.service';
-import { ReactionService } from '../../src/reaction/reaction.service';
-import { ActionService } from '../../src/action/action.service';
-import { Action } from '../../src/action/schemas/action.schema';
-import { GithubService } from '../../src/github/github.service';
+import { UserService } from 'src/user/user.service';
+import { ReactionService } from 'src/reaction/reaction.service';
+import { ActionService } from 'src/action/action.service';
+import { Action } from 'src/action/schemas/action.schema';
+import { GithubService } from 'src/github/github.service';
 
 /**
  * AreaService is the service that handles all the logic for the Area (create/update/delete/...)

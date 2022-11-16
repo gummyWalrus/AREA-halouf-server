@@ -2,7 +2,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Profile, Strategy } from 'passport-github';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { UserService } from '../../../src/user/user.service';
+import { UserService } from 'src/user/user.service';
 import { Octokit } from 'octokit';
 import * as Chance from 'chance';
 
@@ -33,6 +33,7 @@ export class GithubOauthStrategy extends PassportStrategy(Strategy, 'github') {
     })
 
     const email = await octokit.request('GET /user/emails');
+    console.log("profile====: ", profile);
     // Here a custom User object is returned. In the the repo I'm using a UsersService with repository pattern, learn more here: https://docs.nestjs.com/techniques/database
     return {
       firstname: profile.displayName,
@@ -41,7 +42,7 @@ export class GithubOauthStrategy extends PassportStrategy(Strategy, 'github') {
       password: chance.string({length: 10}),
       github: {
         token: _accessToken,
-        username: profile.login
+        username: profile.username
       }
     };
   }

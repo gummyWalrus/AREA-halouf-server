@@ -1,9 +1,9 @@
 import { Inject, Injectable, forwardRef } from "@nestjs/common";
 import { CreateTwitterDto } from "./dto/create-twitter.dto";
-import { Area } from '../../src/area/schemas/area.schema';
+import { Area } from 'src/area/schemas/area.schema';
 import { Client } from 'twitter-api-sdk';
-import { MyTwitterOauthStrategy } from '../../src/auth/twitter/mytwitter-oauth.strategy';
-import { UserService } from "../../src/user/user.service";
+import { MyTwitterOauthStrategy } from 'src/auth/twitter/mytwitter-oauth.strategy';
+import { UserService } from "src/user/user.service";
 
 require('dotenv').config();
 const axios = require('axios');

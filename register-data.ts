@@ -35,7 +35,7 @@ class Reaction {
     dataScheme: object;
 }
 
-const url = 'http://localhost:8080/'
+const url = 'https://area-halouf.herokuapp.com/'
 const admin_token = "B8HUTQAESO5W9CMVTRYJ";
 
 async function registerService(data : Service)
@@ -132,8 +132,8 @@ async function servYoutube() {
                     type: "choice",
                     description: "La visibilité de la video",
                     choices: [
-                        {name: "publique", value: false},
-                        {name: "privée", value: true}
+                        {name: "publique", value: "public"},
+                        {name: "privée", value: "private"},
                     ]
                 }
             }))

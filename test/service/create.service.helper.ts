@@ -1,5 +1,5 @@
 import * as Chance from 'chance';
-import { Service } from '../../src/service/interfaces/service.interface';
+import { Service } from 'src/service/interfaces/service.interface';
 const chance = new Chance();
 
 export const generateServiceInput = function() {

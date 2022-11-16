@@ -2,7 +2,7 @@ import { Controller, Get, Param, Put, Body, Post, Delete, UseGuards } from '@nes
 import { ReactionService } from './reaction.service';
 import { CreateReactionDto } from './dto/create-reaction.dto';
 import { UpdateReactionDto } from './dto/update-reaction.dto';
-import { JwtAuthGuard } from '../../src/auth/jwt/jwt-auth.guard';
+import { JwtAuthGuard } from 'src/auth/jwt/jwt-auth.guard';
 
 @Controller('reactions')
 export class ReactionController {

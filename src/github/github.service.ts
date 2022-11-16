@@ -8,11 +8,11 @@ import {
     IDeleteRepo,
     IUpdateRepoOrg, IDeleteRepoOrg
 } from './interface/repos.interface'
-import { ActionService } from '../../src/action/action.service';
+import { ActionService } from 'src/action/action.service';
 import { ConfigService } from '@nestjs/config';
-import { AreaService } from '../../src/area/area.service';
-import { UserService } from '../../src/user/user.service';
-import { AreaHandlerService } from '../../src/area-handler/area-handler.service';
+import { AreaService } from 'src/area/area.service';
+import { UserService } from 'src/user/user.service';
+import { AreaHandlerService } from 'src/area-handler/area-handler.service';
 
 require('dotenv').config()
 

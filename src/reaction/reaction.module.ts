@@ -3,7 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ReactionController } from './reaction.controller';
 import { ReactionService } from './reaction.service';
 import { Reaction, ReactionSchema } from './schemas/reaction.schema';
-import { ServiceModule } from '../../src/service/service.module';
+import { ServiceModule } from 'src/service/service.module';
 
 @Module({
   imports: [

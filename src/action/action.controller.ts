@@ -2,7 +2,7 @@ import { Controller, Get, Param, Put, Body, Post, Delete, UseGuards } from '@nes
 import { ActionService } from './action.service';
 import { CreateActionDto } from './dto/create-action.dto';
 import { UpdateActionDto } from './dto/update-action.dto';
-import {JwtAuthGuard} from '../../src/auth/jwt/jwt-auth.guard';
+import {JwtAuthGuard} from 'src/auth/jwt/jwt-auth.guard';
 
 @Controller('actions')
 export class ActionController {

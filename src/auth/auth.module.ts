@@ -6,12 +6,12 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from './constants';
 import { AuthController } from './auth.controller';
-import { UserModule } from '../../src/user/user.module';
+import { UserModule } from 'src/user/user.module';
 import { GoogleOauthStrategy } from './google/google-oauth.strategy';
 import { GithubOauthStrategy } from './github/github-oauth.strategy';
 import { HttpModule } from '@nestjs/axios';
 import { MyTwitterOauthStrategy } from './twitter/mytwitter-oauth.strategy';
-import { ServiceModule } from '../../src/service/service.module';
+import { ServiceModule } from 'src/service/service.module';
 import { DiscordStrategy } from './discord/discord-strategy';
 import { DiscordOauthStrategy } from './discord/discord-oauth.strategy';
 

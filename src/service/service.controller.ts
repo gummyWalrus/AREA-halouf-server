@@ -2,7 +2,7 @@ import { Controller, Get, Param, Put, Body, Delete, Post, UseGuards, Req } from 
 import { ServiceService } from './service.service';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
-import { JwtAuthGuard } from '../../src/auth/jwt/jwt-auth.guard';
+import { JwtAuthGuard } from 'src/auth/jwt/jwt-auth.guard';
 
 @Controller('services')
 export class ServiceController {

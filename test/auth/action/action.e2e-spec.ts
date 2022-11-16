@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { generateActionInput } from '../action/create.action.helper';
-import { AppModule } from '../../../src/app.module';
+import { AppModule } from 'src/app.module';
 const axios = require('axios')
 
 describe('Action Controller (e2e)', () => {

@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory, raw } from "@nestjs/mongoose";
 import { Document, Types } from 'mongoose';
-import { Area } from '../../../src/area/schemas/area.schema';
+import { Area } from 'src/area/schemas/area.schema';
 import { Type } from 'class-transformer';
 
 

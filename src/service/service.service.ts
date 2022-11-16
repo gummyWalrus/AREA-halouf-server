@@ -4,10 +4,10 @@ import { Service, ServiceDocument } from './schemas/service.schema';
 import { Model } from 'mongoose';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
-import { ActionService } from '../../src/action/action.service';
-import { ReactionService } from '../../src/reaction/reaction.service';
-import { AuthService } from '../../src/auth/auth.service';
-import { DiscordService } from '../../src/discord/discord.service';
+import { ActionService } from 'src/action/action.service';
+import { ReactionService } from 'src/reaction/reaction.service';
+import { AuthService } from 'src/auth/auth.service';
+import { DiscordService } from 'src/discord/discord.service';
 
 const nologinServices = ['SMS', 'Telegram'];
 

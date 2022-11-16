@@ -3,8 +3,8 @@ import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ConfigService } from '@nestjs/config';
-import { JwtAuthGuard } from '../../src/auth/jwt/jwt-auth.guard';
-import { AuthService } from '../../src/auth/auth.service';
+import { JwtAuthGuard } from 'src/auth/jwt/jwt-auth.guard';
+import { AuthService } from 'src/auth/auth.service';
 
 @Controller('user')
 export class UserController {

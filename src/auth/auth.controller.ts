@@ -1,7 +1,7 @@
 import { Controller, Get, Request, Post, UseGuards, NotFoundException, Res, Redirect, Head } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { ConfigService } from '@nestjs/config';
-import { UserService } from '../../src/user/user.service';
+import { UserService } from 'src/user/user.service';
 import LocalAuthGuard from './local/local-auth.guard';
 import GoogleOauthGuard from './google/google-auth.guard';
 import GithubOauthGuard from './github/github-auth.guard';
@@ -28,6 +28,7 @@ export class AuthController {
       return {url : `${this.config.get('FRONT_URL')}/#redirect?token=${token.token}`};
     else if (req.headers.platform === 'mobile')
       return {url : 'area-halouf://redirect' + `?token=${token.token}`};
+    else return {url : `${this.config.get('FRONT_URL')}/#redirect?token=${token.token}`};
   }
 
   @UseGuards(LocalAuthGuard)

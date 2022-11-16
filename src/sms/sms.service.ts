@@ -30,11 +30,14 @@ export class SmsService {
      * return {Promise} - the promise of the twilio API
      */
     async sendSMS(area: Area) {
-        return this.twilioService.client.messages.create({
+        return await this.twilioService.client.messages.create({
             body: area.reaction.data.message,
             from: "+18482259501",
             to: area.reaction.data.to
-        });
+        }).then(message => {
+            console.log("SUCCESSSSS: ", message);
+            return message;
+        }).catch(console.error);
     }
 
     /**

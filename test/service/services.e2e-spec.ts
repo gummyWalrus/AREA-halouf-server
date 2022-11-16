@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from '../../src/app.module';
-import { Service } from '../../src/service/interfaces/service.interface';
-import { UserService } from '../../src/user/user.service';
+import { AppModule } from 'src/app.module';
+import { Service } from 'src/service/interfaces/service.interface';
+import { UserService } from 'src/user/user.service';
 import { generateServiceInput } from './create.service.helper';
 
 const axios = require('axios');

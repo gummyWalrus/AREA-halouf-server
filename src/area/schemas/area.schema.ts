@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory, raw } from "@nestjs/mongoose";
 import { Document, Types } from 'mongoose';
-import { Action } from "../../../src/action/schemas/action.schema";
-import { Reaction } from "../../../src/reaction/schemas/reaction.schema";
-import { User } from "../../../src/user/schemas/user.schema";
+import { Action } from "src/action/schemas/action.schema";
+import { Reaction } from "src/reaction/schemas/reaction.schema";
+import { User } from "src/user/schemas/user.schema";
 import { Type } from "class-transformer";
 
 

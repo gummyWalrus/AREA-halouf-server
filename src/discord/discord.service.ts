@@ -1,8 +1,8 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { DiscordStrategy } from '../../src/auth/discord/discord-strategy';
+import { DiscordStrategy } from 'src/auth/discord/discord-strategy';
 import { ConfigService } from '@nestjs/config';
-import { Area } from '../../src/area/schemas/area.schema';
+import { Area } from 'src/area/schemas/area.schema';
 
 const GUILD_TEXT = 0;
 const GUILD_CATEGORY = 4;
@@ -26,7 +26,9 @@ export class DiscordService {
             for (const guild of guilds) {
                 const members = await this.http.axiosRef.get(`https://discord.com/api/guilds/${guild.id}/members?limit=1000`,
                 { headers: { 'Authorization': 'Bot ' + this.config.get('DISCORD_BOT_TOKEN')} }).then(res => {return res}).catch((err) => {
-                    return {data: []};
+                    if (err.response.status === 401) {
+                        return {data: []};
+                    } else return {data: []};
                 });
                 for (const member of members.data) {
                     if (member.user.bot && member.user.id === this.config.get('DISCORD_BOT_ID')) {
@@ -57,6 +59,7 @@ export class DiscordService {
                     }
                 }
             }
+            console.log("table channels ", result)
             return result;
         }).catch(console.error);
     }

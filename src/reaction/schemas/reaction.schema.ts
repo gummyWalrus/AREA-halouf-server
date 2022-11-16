@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Type } from "class-transformer";
 import { Document, Types } from 'mongoose';
-import { Service } from "../../../src/service/schemas/service.schema";
+import { Service } from "src/service/schemas/service.schema";
 
 
 export type ReactionDocument = Reaction & Document

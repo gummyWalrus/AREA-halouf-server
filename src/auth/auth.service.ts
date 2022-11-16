@@ -1,9 +1,9 @@
 import { Inject, forwardRef, Injectable, Res } from '@nestjs/common';
-import { UserService } from '../../src/user/user.service';
+import { UserService } from 'src/user/user.service';
 import { JwtService } from "@nestjs/jwt";
 import { Response } from 'express';
-import { ServiceService } from '../../src/service/service.service';
-import { User } from '../../src/user/schemas/user.schema';
+import { ServiceService } from 'src/service/service.service';
+import { User } from 'src/user/schemas/user.schema';
 
 const bcrypt = require('bcryptjs');
 

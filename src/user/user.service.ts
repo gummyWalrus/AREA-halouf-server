@@ -4,7 +4,7 @@ import { User, UserDocument } from './schemas/user.schema';
 import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { AreaService } from '../../src/area/area.service';
+import { AreaService } from 'src/area/area.service';
 
 const bcrypt = require('bcryptjs');
 

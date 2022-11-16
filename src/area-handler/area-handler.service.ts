@@ -1,15 +1,15 @@
 import {forwardRef, Inject, Injectable} from '@nestjs/common';
-import { Area } from '../../src/area/schemas/area.schema';
-import { AreaService } from '../../src/area/area.service';
-import { ActionService } from '../../src/action/action.service';
-import { TwitterService } from '../../src/twitter/twitter.service';
-import { ServiceService } from '../../src/service/service.service';
-import { MailService } from '../../src/mail/mail.service';
+import { Area } from 'src/area/schemas/area.schema';
+import { AreaService } from 'src/area/area.service';
+import { ActionService } from 'src/action/action.service';
+import { TwitterService } from 'src/twitter/twitter.service';
+import { ServiceService } from 'src/service/service.service';
+import { MailService } from 'src/mail/mail.service';
 import {CalendarService} from "../calendar/calendar.service";
 import {YoutubeService} from "../youtube/youtube.service";
 import {SmsService} from "../sms/sms.service";
 import {TelegramService} from "../telegram/telegram.service";
-import { DiscordService } from '../../src/discord/discord.service';
+import { DiscordService } from 'src/discord/discord.service';
 
 
 /**
@@ -326,7 +326,7 @@ export class AreaHandlerService {
     }
 
     /**
-     * @function reactToGithubActions
+     * @function handleGithubAction
      * @description handles the GitHub action. It checks if the action of the area is inside the database (Area MongoDB model),
      *                If the action is valid, the function will call the reactToGithubActions function to react to the area action
      * @param body - the body of the request
@@ -337,6 +337,7 @@ export class AreaHandlerService {
     handleGithubAction(body : object) {
         this.areaService.findAll().then(async (areas : Area[]) => {
             for (const area of areas) {
+                console.log(area);
                 for (const action of this.actionsCallbacks) {
                     if (area.action.id.name == action.name) {
                         if (action.check(area, body))
